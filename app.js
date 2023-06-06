@@ -17,8 +17,6 @@ setInterval(()=>{
 let currentTime = new Date();
 let day = currentTime.getDay();
 let month = (currentTime.getMonth()) + 1;
-let year = currentTime.getFullYear();
-
 
 const diaSemana = (day)=>{
   if (day == 1){
@@ -64,8 +62,9 @@ const mesAno = (month)=>{
     return "Dezembro"
   }
 }
+
 dia.innerHTML = diaSemana(day);
 data.innerHTML = currentTime.getDate();
 mes.innerHTML = mesAno(month);
-ano.innerHTML = year;
+ano.innerHTML = currentTime.getFullYear();
 
